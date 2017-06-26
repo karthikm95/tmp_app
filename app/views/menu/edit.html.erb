@@ -1,0 +1,12 @@
+<h1> Edit Restaurants </h1>
+<%= form_for(@menu) do |f| %>
+	
+	Menu Name :    <%= f.text_field 'menu' %> 
+	<br>
+	<br>
+	Restaurant Name :   <%= f.text_field 'restaurant' %>
+	<br>
+	<br>
+	<%= f.submit 'Edit' %>
+
+<% end %>
