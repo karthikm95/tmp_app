@@ -40,6 +40,11 @@ class MenuController < ApplicationController
 		redirect_to menu_index_path
 	end
 
+	def findall
+		@menu = Menu.find(params[:item]);
+		render menu_index_path
+	end
+
 	private
 	def menu_params
 		params.require(:menu).permit(:menu,:restaurant);
