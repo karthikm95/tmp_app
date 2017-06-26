@@ -1,0 +1,8 @@
+<h1> Find Restaurants for an Item </h1>
+<%= form_for :menu, :url => '/menu/findall/', :method => 'post' do |f| %>
+	
+	Menu Name :    <%= f.text_field 'item' %> 
+	<br><br>
+	<%= f.submit 'Search' %>
+
+<% end %>

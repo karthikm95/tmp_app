@@ -41,9 +41,13 @@ class MenuController < ApplicationController
 	end
 
 	def findall
-		@menu = Menu.where(menu: params[:item])
+		print params
+		@menu = Menu.where(menu: params[:menu][:item]);
 	end
 
+	def find
+	end
+	
 	private
 	def menu_params
 		params.require(:menu).permit(:menu,:restaurant);
