@@ -41,8 +41,7 @@ class MenuController < ApplicationController
 	end
 
 	def findall
-		@menu = Menu.find(params[:item]);
-		render menu_index_path
+		@menu = Menu.where(menu: params[:item])
 	end
 
 	private
